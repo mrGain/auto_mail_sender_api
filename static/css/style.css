@@ -1,0 +1,21 @@
+table, td, th {
+    border: 1px solid #66afb3;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: auto;
+}
+
+th {
+    height: 30px;
+    background-color: #2f90bf;
+    color: white;
+}
+
+td {
+    text-align: center;
+    padding: 5px 10px;
+}
+#query-table tr:nth-child(even){background-color: #f2f2f2;}

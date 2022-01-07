@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}query{% endblock title %}
+
+
+{% block css %}
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #66afb3;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: auto;
+            width: auto;
+        }
+
+        th {
+            height: 30px;
+            background-color: #2f90bf;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+            padding: 5px 10px;
+        }
+
+        #query-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+{% endblock css %}
+{% block content %}
+    <table id="query-table">
+        <thead>
+            <tr>
+                <th>Sl No</th>
+                <th>Date</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.slno}}.</td>
+                <td>{{ data._id }}</td>
+                <td>{{ data.count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
